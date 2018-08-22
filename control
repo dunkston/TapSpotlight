@@ -1,7 +1,7 @@
 Package: com.dunkston.tapspotlight
 Name: TapSpotlight
 Depends: mobilesubstrate
-Version: 1.1
+Version: 1.2
 Architecture: iphoneos-arm
 Description: Double tap on the Home Bar to invoke Spotlight
 Maintainer: dunkston

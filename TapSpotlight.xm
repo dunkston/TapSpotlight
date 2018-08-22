@@ -18,7 +18,8 @@ static void initFakeHomeBar() {
 
 	fakeHomeBar.opaque = NO;
 	fakeHomeBar.windowLevel = UIWindowLevelStatusBar;
-	fakeHomeBar.backgroundColor = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 0.01];
+	fakeHomeBar.backgroundColor = [UIColor colorWithWhite: 1 alpha: 0.001];
+	fakeHomeBar.alpha = 0.011;
 	fakeHomeBar.rootViewController = [[UIViewController alloc] init];
 
 	[fakeHomeBar makeKeyAndVisible];
