@@ -14,17 +14,20 @@ static NSString *nsNotificationString = @"com.midnight.tapspotpref.plist/post";
 
 //prefs
 static BOOL enableBlacklist;
+static BOOL showBar;
 static int width;
 static int height;
 
 static void notificationCallback(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
 	NSNumber *eBlack = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"enableBlacklist" inDomain:nsDomainString];
+	NSNumber *shBar = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"showBar" inDomain:nsDomainString];
 	NSNumber *wid = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"width" inDomain:nsDomainString];
 	NSNumber *hei = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"height" inDomain:nsDomainString];
 
 
 // Define default state of preferences
 	enableBlacklist = (eBlack)? [eBlack boolValue]:NO;
+	showBar = (shBar)? [shBar boolValue]:NO;
 	width = (wid)? [wid floatValue]:1;
 	height = (hei)? [hei floatValue]:1;
 }
@@ -50,8 +53,14 @@ static void initFakeHomeBar() {
 	fakeHomeBar.center = CGPointMake([[UIScreen mainScreen] bounds].size.width/2, [[UIScreen mainScreen] bounds].size.height);
 	fakeHomeBar.opaque = NO;
 	fakeHomeBar.windowLevel = UIWindowLevelStatusBar;
-	fakeHomeBar.backgroundColor = [UIColor colorWithWhite: 1 alpha: 0.001];
-	fakeHomeBar.alpha = 0.011;
+	if(!showBar){
+		fakeHomeBar.backgroundColor = [UIColor colorWithWhite: 1 alpha: 0.001];
+		fakeHomeBar.alpha = 0.011;
+	}else{
+		fakeHomeBar.backgroundColor = [UIColor redColor];
+		fakeHomeBar.alpha = 1;
+	}
+
 	fakeHomeBar.rootViewController = [[UIViewController alloc] init];
 
 	[fakeHomeBar makeKeyAndVisible];

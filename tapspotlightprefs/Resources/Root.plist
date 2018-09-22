@@ -14,7 +14,7 @@
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<true/>
+			<false/>
 			<key>defaults</key>
 			<string>/var/mobile/Library/Preferences/com.midnight.tapspotpref.plist</string>
 			<key>PostNotification</key>
@@ -33,10 +33,24 @@
       <string>selectExcludeApps</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>/var/mobile/Library/Preferences/com.midnight.tapspotpref.plist</string>
+			<key>PostNotification</key>
+			<string>com.midnight.tapspotpref.plist/post</string>
+			<key>key</key>
+			<string>showBar</string>
+			<key>label</key>
+			<string>Visualize Bar Touch Area</string>
+		</dict>
+		<dict>
 				<key>cell</key>
 				<string>PSGroupCell</string>
 				<key>footerText</key>
-				<string>Set Height of Bar (Higher is Smaller)</string>
+				<string>Set Height of Bar (Higher is Bigger)</string>
 				<key>footerAlignment</key>
 				<integer>1</integer>
 			</dict>
