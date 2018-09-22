@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>TapSpotlight</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>/var/mobile/Library/Preferences/com.midnight.tapspotpref.plist</string>
+			<key>PostNotification</key>
+			<string>com.midnight.tapspotpref.plist/post</string>
+			<key>key</key>
+			<string>enableBlacklist</string>
+			<key>label</key>
+			<string>Enable BlackList</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+      <key>label</key>
+      <string>Select Blacklisted Apps</string>
+      <key>action</key>
+      <string>selectExcludeApps</string>
+		</dict>
+		<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string>Set Height of Bar (Higher is Smaller)</string>
+				<key>footerAlignment</key>
+				<integer>1</integer>
+			</dict>
+		<dict>
+				<key>cell</key>
+				<string>PSSliderCell</string>
+				<key>isContinuous</key>
+				<true/>
+				<key>key</key>
+				<string>height</string>
+				<key>leftImage</key>
+				<string/>
+				<key>max</key>
+				<real>40</real>
+				<key>min</key>
+				<real>20</real>
+				<key>rightImage</key>
+				<string/>
+				<key>showValue</key>
+				<true/>
+				<key>description</key>
+				<string>Height of touch area.</string>
+				<key>PostNotification</key>
+				<string>com.midnight.tapspotpref.plist/post</string>
+				<key>defaults</key>
+				<string>/var/mobile/Library/Preferences/com.midnight.tapspotpref.plist</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string>Set Width of Bar (Higher is Smaller)</string>
+				<key>footerAlignment</key>
+				<integer>1</integer>
+			</dict>
+
+			<dict>
+					<key>cell</key>
+					<string>PSSliderCell</string>
+					<key>isContinuous</key>
+					<true/>
+					<key>key</key>
+					<string>width</string>
+					<key>leftImage</key>
+					<string/>
+					<key>max</key>
+					<real>5</real>
+					<key>min</key>
+					<real>1</real>
+					<key>rightImage</key>
+					<string/>
+					<key>showValue</key>
+					<true/>
+					<key>description</key>
+					<string>Width of touch area.</string>
+					<key>PostNotification</key>
+					<string>com.midnight.tapspotpref.plist/post</string>
+					<key>defaults</key>
+					<string>/var/mobile/Library/Preferences/com.midnight.tapspotpref.plist</string>
+				</dict>
+				<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>footerText</key>
+				<string></string>
+				<key>footerAlignment</key>
+				<integer>1</integer>
+			</dict>
+	</array>
+	<key>title</key>
+	<string>TapSpotlight</string>
+</dict>
+</plist>
