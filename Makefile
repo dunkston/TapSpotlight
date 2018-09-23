@@ -6,6 +6,7 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = TapSpotlight
 TapSpotlight_FILES = TapSpotlight.xm
 TapSpotlight_LIBRARIES = sparkapplist
+TapSpotlight_FRAMEWORKS = AudioToolbox
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

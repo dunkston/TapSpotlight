@@ -2,6 +2,7 @@
 #import <SpringBoard/SBApplication.h>
 #import <SparkAppList.h>
 #import <objc/runtime.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 //Load Preferences
 @interface NSUserDefaults (TapSpot)
@@ -117,6 +118,7 @@ static void initFakeHomeBar() {
 	%new
 
 	- (void)openSpotlight {
+		AudioServicesPlaySystemSound(1520);
 		[(AXSpringBoardServer *)[%c(AXSpringBoardServer) server] revealSpotlight];
 	}
 
